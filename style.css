@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.tabs {
+  display: flex;
+  height: 400px;
+  width: 90%;
+  box-shadow: 5px 5px 10px 5px #ccc;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.tabs .tab-header {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 50px 0;
+}
+
+.tabs .tab-header button {
+  margin-bottom: 10px;
+}
+
+.tabs .tab-header > div {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.tabs .tab-header > div:hover,
+.tabs .tab-header > div.active {
+  color: #00acee;
+}
+
+.tabs .tab-header div i {
+  margin-right: 5px;
+}
+
+.tabs .tab-content {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.tabs .tab-content > div {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  width: calc(100% - 200px);
+  height: 100%;
+  padding: 40px 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Deshabilita los eventos del mouse en el contenido oculto */
+}
+
+.tabs .tab-content > div.active {
+  opacity: 1;
+  pointer-events: auto; /* Habilita los eventos del mouse en el contenido activo */
+}
+
+.tabs .tab-indicator {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  background: #00acee;
+  left: 250px;
+  top: 80px;
+  transition: top 0.9s ease;
+}
+
+.PHI-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.PHI-table th,
+.PHI-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.PHI-table th:first-child,
+.PHI-table td:first-child {
+  font-weight: bold;
+}
+
+/* Estilos para la versión clara */
+body.light-mode {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.tabs.light-mode {
+  background: #f5f5f5;
+  box-shadow: 5px 5px 10px 5px #ccc;
+}
+
+.tabs.light-mode .tab-header > div.active,
+.tabs.light-mode .tab-header > div:hover {
+  color: #00acee;
+}
+
+.tabs.light-mode .tab-indicator {
+  background: #00acee;
+}
+
+/* Estilos para la versión oscura */
+body.dark-mode {
+  background: #333;
+  color: #f5f5f5;
+}
+
+.tabs.dark-mode {
+  background: #333;
+  box-shadow: 5px 5px 10px 5px #000;
+}
+
+.tabs.dark-mode .tab-header > div.active,
+.tabs.dark-mode .tab-header > div:hover {
+  color: #00acee;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media screen and (max-width: 6.4in) {
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 130%;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    box-shadow: 5px 5px 10px 5px #ccc;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 25px;
+  }
+  
+  .tabs .tab-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-right: none;
+    padding: 20px 0;
+  }
+  
+  .tabs .tab-header button {
+    margin-bottom: 10px;
+  }
+  
+  .tabs .tab-header > div {
+    height: auto;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  
+  .tabs .tab-header > div:hover,
+  .tabs .tab-header > div.active {
+    color: #00acee;
+  }
+  
+  .tabs .tab-header div i {
+    margin-right: 5px;
+  }
+  
+  .tabs .tab-content {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .tabs .tab-content > div {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: auto; /* Habilita los eventos del mouse en el contenido en dispositivos móviles */
+  }
+  
+  .tabs .tab-content > div.active {
+    opacity: 1;
+  }
+  
+  .tabs .tab-indicator {
+    display: none;
+  }
+  
+  .PHI-table th,
+  .PHI-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .PHI-table th:first-child,
+  .PHI-table td:first-child {
+    font-weight: bold;
+  }
+  
+  /* Estilos para la versión clara */
+  body.light-mode {
+    background: #f5f5f5;
+    color: #333;
+  }
+  
+  .tabs.light-mode {
+    background: #f5f5f5;
+    box-shadow: 5px 5px 10px 5px #ccc;
+  }
+  
+  .tabs.light-mode .tab-header > div.active,
+  .tabs.light-mode .tab-header > div:hover {
+    color: #00acee;
+  }
+  
+  /* Estilos para la versión oscura */
+  body.dark-mode {
+    background: #333;
+    color: #f5f5f5;
+  }
+  
+  .tabs.dark-mode {
+    background: #333;
+    box-shadow: 5px 5px 10px 5px #000;
+  }
+  
+  .tabs.dark-mode .tab-header > div.active,
+  .tabs.dark-mode .tab-header > div:hover {
+    color: #00acee;
+  }
+}

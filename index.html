@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BRAVO-UGME</title>
+  <link rel="stylesheet" href="style.css"> <!-- Archivo CSS personalizado -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; justify-content: flex-end"><button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> </button> <!-- Botón para cambiar el modo claro/oscuro --></div>
+    
+    <div class="tabs">
+      <div class="tab-header">
+        <div class="active"> <i class="fas fa-grip-horizontal"></i> MODULARES</div>
+        <div>                <i class="fas fa-chair"></i> MOBILIARIO</div>
+        <div>                <i class="fas fa-desktop"></i> SISME</div>
+        <div>                <i class="fas fa-sitemap"></i> SEGUIMIENTO</div>
+        
+      </div>
+      <div class="tab-indicator"></div>
+      <div class="tab-content">
+
+        <div class="active">
+          <i class="fas fa-grip-horizontal"></i> MODULARES
+          <h1>Avances</h1>
+          <table class="PHI-table" style="font-size: small;">
+            <tr>
+              <th>PROYECTO</th>
+              <th></th><th></th>
+            </tr>
+            <tr>
+              <td>DU 085-2023</td>
+              <td>
+                <a href="https://lookerstudio.google.com/reporting/1ea254b7-1a99-4ca5-8131-a21314dd2651/page/yMwPD" target="_blank">Web </a> </td>
+              <td>  <a href="https://docs.google.com/spreadsheets/d/1vuM-I9F8ijeLrj174tNCEJsiqDSpa5hn/edit?usp=drive_link&ouid=116112942331197889964&rtpof=true&sd=true" target="_blank"> EXCEL</a>
+              </td>
+            </tr>
+            <tr>
+              <td>AM (OTI)</td>
+              <td>  <a href="https://lookerstudio.google.com/reporting/a7a0bc28-34b5-4177-b5cd-5e595d8b8675/page/5rXND" target="_blank">Web Modelo</a> </td>
+              <td>  <a href="https://docs.google.com/document/d/16XKopJ90WPje_O1TGXeBHStkzIj5i2x5/edit?usp=sharing&ouid=116112942331197889964&rtpof=true&sd=true" target="_blank">DOCX</a>
+              </td>
+            </tr>
+            <tr>
+              <td>APP-FICHAS (OTI)</td>
+              <td>  Modelo </td>
+              <td>  Cronograma </td>
+            </tr>
+            <tr>
+              <td>ENCUESTAS</td>
+              <td>
+                <a href="https://docs.google.com/forms/d/1PyL601occwkU4ftbfDMChYYS5_CBmu4Ip5pTLsb6mCM/edit?usp=drive_web" target="_blank">REGISTRO</a> </td>
+              <td>  <a href="https://docs.google.com/spreadsheets/d/1DHzLMORWTPeDMuavYaq-zYVwSSfTPYfn31ZU1EbS274/edit?usp=drive_link" target="_blank">848 AVANCE</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <i class="fas fa-chair"></i> MOBILIARIO
+          <h1>Avances</h1>
+          <table class="PHI-table" style="font-size: small;">
+            <tr>
+              <th>PROYECTO</th>
+              <th></th><th></th>
+            </tr>
+            <tr>
+              <td>Solicitudes Recibidas</td>
+              <td>
+                <a href="https://lookerstudio.google.com/reporting/b9016818-01aa-45f3-85ff-e4e50622e569/page/XPrOD" target="_blank">Web</a> </td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <i class="fas fa-desktop"></i> SISME
+          <h1>Avances</h1>
+          <table class="PHI-table" style="font-size: small;">
+            <tr>
+              <th>PROYECTO</th>
+              <th></th><th></th>
+            </tr>
+            <tr>
+              <td>Boceto</td>
+              <td>
+                <a href="https://docs.google.com/presentation/d/1qn4-GH72tSm_h75ztWVmoH5PxJD9ZQSQ/edit?usp=sharing&ouid=116112942331197889964&rtpof=true&sd=true" target="_blank">Web</a> </td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <i class="fas fa-sitemap"></i> SEGUIMIENTO
+          <h1>Avances</h1>
+          <table class="PHI-table" style="font-size: small;">
+            <tr>
+              <th>PROYECTO</th>
+              <th></th><th></th>
+            </tr>
+            <tr>
+              <td>Boceto</td>
+              <td>
+                <a href="#" target="_blank">Web</a> </td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Archivo JavaScript personalizado -->
+  <script>
+    function toggleDarkMode() {
+      const body = document.querySelector('body');
+      const tabs = document.querySelector('.tabs');
+  
+      body.classList.toggle('dark-mode');
+      tabs.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
+
